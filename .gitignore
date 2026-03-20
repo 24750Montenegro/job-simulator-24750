@@ -1,6 +1,7 @@
 # Environment
 .env
-docker-compose.yml
+#docker-compose.yml
+#eliminado del ignore para que si tenga las versiones reales - y se levante con un solo comando
 
 # Dependencies
 node_modules/
