@@ -18,14 +18,14 @@ async function load() {
       tr.className = "hover:bg-slate-800/50 transition-colors";
       tr.innerHTML = `
         <td class="px-6 py-4 text-slate-500 text-sm">${r.id}</td>
-        <td class="px-6 py-4 font-medium">${r.campo1}</td>
-        <td class="px-6 py-4 text-slate-300">${r.campo2}</td>
-        <td class="px-6 py-4 text-slate-300">${r.campo3}</td>
-        <td class="px-6 py-4 text-slate-300">${r.campo4}</td>
-        <td class="px-6 py-4 text-slate-300">${r.campo5}</td>
+        <td class="px-6 py-4 font-medium">${r.nombre}</td>
+        <td class="px-6 py-4 text-slate-300">${r.descripcion}</td>
+        <td class="px-6 py-4 text-slate-300">${r.categoria}</td>
+        <td class="px-6 py-4 text-slate-300">${r.stock}</td>
+        <td class="px-6 py-4 text-slate-300">${r.precio}</td>
         <td class="px-6 py-4">
-          <span class="px-2 py-0.5 rounded-full text-xs font-medium ${r.campo6 ? 'bg-emerald-900/50 text-emerald-400' : 'bg-slate-700 text-slate-400'}">
-            ${r.campo6}
+          <span class="px-2 py-0.5 rounded-full text-xs font-medium ${r.disponible ? 'bg-emerald-900/50 text-emerald-400' : 'bg-slate-700 text-slate-400'}">
+            ${r.disponible}
           </span>
         </td>
         <td class="px-6 py-4">
