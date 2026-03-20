@@ -6,12 +6,12 @@ async function load() {
   try {
     const r = await getOne(id);
     const form = document.getElementById("form");
-    form.campo1.value = r.campo1;
-    form.campo2.value = r.campo2;
-    form.campo3.value = r.campo3;
-    form.campo4.value = r.campo4;
-    form.campo5.value = r.campo5;
-    form.campo6.checked = r.campo6 === true || r.campo6 === "true";
+    form.nombre.value      = r.nombre;
+    form.descripcion.value = r.descripcion;
+    form.categoria.value   = r.categoria;
+    form.stock.value       = r.stock;
+    form.precio.value      = r.precio;
+    form.disponible.checked = r.disponible === true || r.disponible === "true";
   } catch (e) {
     document.getElementById("error").textContent = `Error al cargar el registro: ${e.message}`;
     document.getElementById("error").classList.remove("hidden");
@@ -26,12 +26,12 @@ document.getElementById("form").addEventListener("submit", async (e) => {
 
   const data = new FormData(e.target);
   const payload = {
-    campo1: data.get("campo1"),
-    campo2: data.get("campo2"),
-    campo3: data.get("campo3"),
-    campo4: parseInt(data.get("campo4"), 10),
-    campo5: parseFloat(data.get("campo5")),
-    campo6: e.target.campo6.checked,
+    nombre:      data.get("nombre"),
+    descripcion: data.get("descripcion"),
+    categoria:   data.get("categoria"),
+    stock:       parseInt(data.get("stock"), 10),
+    precio:      parseFloat(data.get("precio")),
+    disponible:  e.target.disponible.checked,
   };
 
   try {
